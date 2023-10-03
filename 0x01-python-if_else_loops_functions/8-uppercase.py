@@ -1,14 +1,9 @@
+
 #!/usr/bin/python3
-# 8-uppercase.py
-
-
 def uppercase(str):
+    result = ""
     for c in str:
         if ord(c) >= 97 and ord(c) <= 122:
             c = chr(ord(c) - 32)
-            print("{}".format(c), end="")
-            print("")
-
-if __name__ == "__main__":
-    uppercase("best")
-    uppercase("Best School 98 Battery street")
+        result += c
+    print("{}".format(result))
