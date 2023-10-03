@@ -8,6 +8,7 @@ def uppercase(str):
             c = chr(ord(c) - 32)
             print("{}".format(c), end="")
             print("")
+
 if __name__ == "__main__":
     uppercase("best")
     uppercase("Best School 98 Battery street")
