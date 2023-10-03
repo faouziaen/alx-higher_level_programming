@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # 2-print_alphabet.py
 
+alphabet = ""
 for letter in range(97, 123):
-        print("{}".format(chr(letter)), end="")
+        alphabet += chr(letter)
+print("{}".format(alphabet), end="")
