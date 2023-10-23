@@ -2,16 +2,13 @@
 
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
-    n = 0
-    while n < x:
+    i = 0
+    while i < x:
         try:
-            if n < len(my_list):
-                print("{:d}".format(my_list[n]), end='')
-                count += 1
-            else:
-                raise IndexError("list index out of range")
+            print("{:d}".format(my_list[i]), end='')
+            count += 1
         except (ValueError, TypeError):
             pass
-        n += 1
+        i += 1
     print()
     return count
