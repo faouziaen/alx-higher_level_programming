@@ -7,13 +7,17 @@ Attributes:
     board (list): A list of lists representing the chessboard.
     solutions (list): A list of lists containing solutions.
 
+Solutions are represented in the format [[r, c], [r, c], [r, c], [r, c]]
+where `r` and `c` represent the row and column, respectively, where a
+queen must be placed on the chessboard.
 """
 import sys
 
 
 def init_board(n):
-    """Create an `size`x`size` sized chessboard
-    initialized with empty spaces."""
+    """Initialize an `n`x`n`sized chessboard initialized
+    with empty spaces."""
+    chessboard = []
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
@@ -21,7 +25,7 @@ def init_board(n):
 
 
 def board_deepcopy(board):
-    """Return a deep copy of a chessboard."""
+    """Return a deepcopy of a chessboard."""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
@@ -39,10 +43,10 @@ def get_solution(board):
 
 
 def xout(board, row, col):
-    """Mark positions on the chessboard where queens can't be placed.
+    """X out spots on a chessboard.
 
-    Mark all positions where non-attacking queens
-    can no longer be placed as 'x'.
+    All spots where non-attacking queens can no
+    longer be played are X-ed out.
 
     Args:
         board (list): The current working chessboard.
