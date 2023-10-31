@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 """Solves the N-queens puzzle.
 
+Determines all possible solutions to placing N
+N non-attacking queens on an NxN chessboard.
+
+Example:
+    $ ./101-nqueens.py N
+
 N must be an integer greater than or equal to 4.
 
 Attributes:
@@ -15,9 +21,7 @@ import sys
 
 
 def init_board(n):
-    """Initialize an `n`x`n`sized chessboard initialized
-    with empty spaces."""
-    chessboard = []
+    """Initialize an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
@@ -32,7 +36,7 @@ def board_deepcopy(board):
 
 
 def get_solution(board):
-    """Retrieve the list representation of a solved chessboard."""
+    """Return the list of lists representation of a solved chessboard."""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
