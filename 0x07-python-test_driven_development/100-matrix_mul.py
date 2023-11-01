@@ -47,11 +47,11 @@ def matrix_mul(m_a, m_b):
                 b_notn = True
 
     if len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
-        #a_empty = True
+        a_empty = True
         raise ValueError("m_a can't be empty")
 
     if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
-        #b_empty = True
+        b_empty = True
         raise ValueError("m_b can't be empty")
 
     if a_notn:
