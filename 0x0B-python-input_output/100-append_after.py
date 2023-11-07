@@ -8,7 +8,8 @@ def append_after(filename="", search_string="", new_string=""):
     Args:
         filename (str): The file to search and modify.
         search_string (str): The string to search for in each line.
-        new_string (str): The line of text to insert after each line containing the search string.
+        new_string (str): The line of text to
+        insert after each line containing the search string.
     """
     text = ""
     with open(filename) as r:
